@@ -9,16 +9,23 @@
 	</head>
 	<body>
 		<a-scene>
-			
-			<a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
-				animation="property: position; dir: alternate; dur: 1000;
-                	easing: easeInSine; loop: true; to: 0 2 0"></a-box>
+
+			<a-box color="red" position="0 -2 5" rotation="0 45 45" scale="2 2 2">
+				<a-animation attribute="position" to="0 2 5" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation>
+				<a-animation attribute="rotation" 
+							 to="0 360 0" 
+							 fill="forwards" 
+							 dur="10000"
+							 repeat="indefinite">
+				</a-animation>
+			</a-box>
 
 			<a-curvedimage src="img/ui.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3" rotation="0 90 0">
 			</a-curvedimage>
 			<a-sky src="img/background.png">
 				<a-root>
-					<a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.png);" scale="1 1 1">
+					<a-entity geometry="primitive: sphere" material="shader: flat; src: url(img/background.png);" scale="0 0 0">
 					</a-entity>
 				</a-root>
 			</a-sky>
