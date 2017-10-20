@@ -4,11 +4,16 @@
 		<meta charset="utf-8">
 		<title>Liferay VR</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script> 
+		<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script> 
 	</head>
 	<body>
 		<a-scene>
-			<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+			
+			<a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
+				animation="property: position; dir: alternate; dur: 1000;
+                	easing: easeInSine; loop: true; to: 0 2 0"></a-box>
+
 			<a-curvedimage src="img/ui.png" radius="4" theta-length="360" height="12" scale=".3 .3 .3" rotation="0 90 0">
 			</a-curvedimage>
 			<a-sky src="img/background.png">
